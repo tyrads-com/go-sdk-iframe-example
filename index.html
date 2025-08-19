@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TyrAds SDK Iframe</title>
+</head>
+<body style="background: #f7f8fa; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0;">
+    <div id="container" style="max-width: 480px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); padding: 32px;">
+        <h1 id="title" style="color: #2d3748; font-size: 2rem; margin-bottom: 16px;">Loading...</h1>
+    </div>
+    <script>
+        fetch('http://localhost:8080')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('container');
+                if (data.success) {
+                    container.innerHTML = `
+                        <h1 style="color: #2d3748; font-size: 2rem; margin-bottom: 16px;">TyrAds SDK Iframe</h1>
+                        <h3 style="color: #4a5568; font-size: 1.1rem; margin-bottom: 8px;">Generated Token</h3>
+                        <textarea rows="4" cols="50" readonly style="width: 100%; font-size: 1rem; padding: 8px; border-radius: 6px; border: 1px solid #cbd5e0; background: #f1f5f9; margin-bottom: 24px;">${data.token}</textarea>
+                        <iframe id="tyrads_iframe" src="${data.iframeUrl}" height="650" width="300" frameborder="0" allowfullscreen style="display: block; margin: 0 auto; border-radius: 8px; border: 1px solid #e2e8f0;"></iframe>
+                    `;
+                } else {
+                    container.innerHTML = `
+                        <h1 style="color: #e53e3e; font-size: 1.5rem; margin-bottom: 16px;">Error Loading SDK Iframe</h1>
+                        <p style="color: #718096; background: #fff5f5; border: 1px solid #fed7d7; border-radius: 6px; padding: 16px;">Token not generated. <br>Iframe URL: ${data.iframeUrl}</p>
+                    `;
+                }
+            })
+            .catch(error => {
+                const container = document.getElementById('container');
+                container.innerHTML = `
+                    <h1 style="color: #e53e3e; font-size: 1.5rem; margin-bottom: 16px;">Error Loading SDK Iframe</h1>
+                    <p style="color: #718096; background: #fff5f5; border: 1px solid #fed7d7; border-radius: 6px; padding: 16px;">${error}</p>
+                `;
+            });
+    </script>
+</body>
+</html>
