@@ -19,7 +19,12 @@
                         <h1 style="color: #2d3748; font-size: 2rem; margin-bottom: 16px;">TyrAds SDK Iframe</h1>
                         <h3 style="color: #4a5568; font-size: 1.1rem; margin-bottom: 8px;">Generated Token</h3>
                         <textarea rows="4" cols="50" readonly style="width: 100%; font-size: 1rem; padding: 8px; border-radius: 6px; border: 1px solid #cbd5e0; background: #f1f5f9; margin-bottom: 24px;">${data.token}</textarea>
+
+                        <h3 style="color: #4a5568; font-size: 1.1rem; margin-bottom: 16px;">Offerwall</h3>
                         <iframe id="tyrads_iframe" src="${data.iframeUrl}" height="650" width="300" frameborder="0" allowfullscreen style="display: block; margin: 0 auto; border-radius: 8px; border: 1px solid #e2e8f0;"></iframe>
+            
+                        <h3 style="color: #4a5568; font-size: 1.1rem; margin-bottom: 16px;">Premium Widget</h3>
+                        <iframe id="tyrads_iframe" src="${data.iframePremiumUrl}" height="400" width="300" frameborder="0" allowfullscreen style="display: block; margin: 0 auto; border-radius: 8px; border: 1px solid #e2e8f0;"></iframe>
                     `;
                 } else {
                     container.innerHTML = `

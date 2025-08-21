@@ -56,7 +56,14 @@ func main() {
 			c.JSON(500, gin.H{"error": "Failed to generate iframe URL: " + err.Error()})
 			return
 		}
-		c.JSON(200, gin.H{"success": success, "token": token, "iframeUrl": iframeUrl})
+
+		iframePremiumUrl, err := tyrAdsSdk.IframePremiumWidget(token, nil)
+		if err != nil {
+			c.JSON(500, gin.H{"error": "Failed to generate iframe premium URL: " + err.Error()})
+			return
+		}
+
+		c.JSON(200, gin.H{"success": success, "token": token, "iframeUrl": iframeUrl, "iframePremiumUrl": iframePremiumUrl})
 	})
 	r.Run()
 }
