@@ -62,6 +62,8 @@ github.com/tyrads-com/tyrads-go-sdk-iframe v0.1.4 h1:5sfFE6RQxpbc7rkN+FhIKUJdQFj
 github.com/tyrads-com/tyrads-go-sdk-iframe v0.1.4/go.mod h1:4h/CocCJDI7FxhCVa4tHWDRgETlQnWUl8EHgwOT2vTQ=
 github.com/tyrads-com/tyrads-go-sdk-iframe v0.1.5 h1:tq6MWmJPrl5ZnU93nml8xI1VWMDqXzqO/ba2txJYyeU=
 github.com/tyrads-com/tyrads-go-sdk-iframe v0.1.5/go.mod h1:suljN383aiubBWqeJcgbziJ6M48a2OaqwKDLI6F3Hnw=
+github.com/tyrads-com/tyrads-go-sdk-iframe v0.1.6 h1:fLnn1MGblVEjCJkux54Be7LX4VzeaBAx7nAujQN4udg=
+github.com/tyrads-com/tyrads-go-sdk-iframe v0.1.6/go.mod h1:QOACzG4nFzZHrebQ2jN9x1j19z5rjthmBa2di1kFiZM=
 github.com/ugorji/go/codec v1.3.0 h1:Qd2W2sQawAfG8XSvzwhBeoGq71zXOC/Q1E9y/wUcsUA=
 github.com/ugorji/go/codec v1.3.0/go.mod h1:pRBVtBSKl77K30Bv8R2P+cLSGaTtex6fsA2Wjqmfxj4=
 golang.org/x/arch v0.20.0 h1:dx1zTU0MAE98U+TQ8BLl7XsJbgze2WnNKF/8tGp/Q6c=

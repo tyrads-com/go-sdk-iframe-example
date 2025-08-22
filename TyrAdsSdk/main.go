@@ -8,8 +8,8 @@ import (
 var API_KEY = "YOUR_API_KEY"       // Replace with your actual API key
 var API_SECRET = "YOUR_API_SECRET" // Replace with your actual API secret
 var LANGUAGE = "en"
-var AGE = 18                                // Replace with actual age
-var GENDER = 1                              // 1 for male, 2 for female
+var AGE *int = nil                          // (Optional) Replace with actual age
+var GENDER *int = nil                       // (Optional) 1 for male, 2 for female
 var PUBLISHER_USER_ID = "PUBLISHER_USER_ID" // Replace with actual publisher user ID
 
 func CORSMiddleware() gin.HandlerFunc {
